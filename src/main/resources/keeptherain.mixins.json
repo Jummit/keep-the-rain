@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.jummit.keeptherain.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+  ],
+  "client": [
+    "ResetWeatherMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
