@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Keep The Rain",
-  "description": "Keeps the rain",
+  "description": "Makes the rain stay after sleeping. Thunderstorms turn into rain after sleeping.",
   "authors": [
     "Jummit"
   ],
