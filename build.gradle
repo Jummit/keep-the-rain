@@ -44,9 +44,11 @@ jar {
 import com.modrinth.minotaur.TaskModrinthUpload
 
 task publishModrinth (type: TaskModrinthUpload) {
-    token = new BufferedReader(new InputStreamReader(System.in)).readLine();
-	projectId = 'keeptherain'
-	versionNumber = version
+	System.out.println("Enter a Modrinth Token: ");
+	token = new BufferedReader(new InputStreamReader(System.in)).readLine();
+	projectId = 'Cprd9pHZ'
+	versionNumber = mod_version
+	versionName = mod_version + '-' + project.minecraft_version
 	uploadFile = remapJar
 	addGameVersion(project.minecraft_version)
 	addLoader('fabric')
