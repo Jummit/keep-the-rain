@@ -2,35 +2,34 @@
   "schemaVersion": 1,
   "id": "keeptherain",
   "version": "${version}",
-
   "name": "Keep The Rain",
   "description": "Makes the rain stay after sleeping. Thunderstorms turn into rain after sleeping.",
   "authors": [
     "Jummit"
   ],
   "contact": {
-    "homepage": "jummit.com"
+    "homepage": "jummit.com",
+    "issues": "https://github.com/Jummit/keep-the-rain/issues",
+    "sources": "https://github.com/Jummit/keep-the-rain"
   },
-
   "license": "MIT",
-  "icon": "assets/keeptherain/icon.png",
-
+  "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.jummit.keeptherain.KeepTheRain"
+      "com.jummit.keeptherain.fabric.KeepTheRainFabric"
     ]
   },
   "mixins": [
     "keeptherain.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.12.1",
+    "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.18.x",
-    "java": ">=16"
+    "minecraft": ">=1.16.4",
+    "architectury": ">=1.1.55"
   },
   "suggests": {
+    "flamingo": "*"
   }
 }

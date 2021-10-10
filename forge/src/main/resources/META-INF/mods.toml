@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[37,)"
+issueTrackerURL = "https://github.com/Jummit/keep-the-rain/issues"
+license = "MIT"
+
+[[mods]]
+modId = "keeptherain"
+version = "${version}"
+displayName = "Keep The Rain"
+authors = "Jummit"
+description = '''
+Makes the rain stay after sleeping. Thunderstorms turn into rain after sleeping.
+'''
+logoFile = "icon.png"
+
+[[dependencies.keeptherain]]
+modId = "forge"
+mandatory = true
+versionRange = "[37,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.keeptherain]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.17.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.keeptherain]]
+modId = "architectury"
+mandatory = true
+versionRange = "[2.3.23,)"
+ordering = "AFTER"
+side = "BOTH"

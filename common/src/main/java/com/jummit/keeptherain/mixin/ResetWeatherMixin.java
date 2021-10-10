@@ -7,16 +7,16 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import net.minecraft.server.world.ServerWorld;
+import net.minecraft.server.level.ServerLevel;
 
-@Mixin(ServerWorld.class)
+@Mixin(ServerLevel.class)
 public class ResetWeatherMixin {
-	@Inject(at = @At("HEAD"), method = "resetWeather()V", cancellable = true)
+	@Inject(at = @At("HEAD"), method = "stopWeather()V", cancellable = true)
 	private void init(CallbackInfo info) {
-		ServerWorld world = ((ServerWorld)(Object)this);
-		if (!world.getGameRules().getBoolean(KeepTheRain.DO_SLEEP_CLEAR_WEATHER)) {
-			if (world.getLevelProperties().isThundering()) {
-				world.setWeather(0, 0, true, false);
+		ServerLevel level = ((ServerLevel)(Object)this);
+		if (!level.getGameRules().getBoolean(KeepTheRain.DO_SLEEP_CLEAR_WEATHER)) {
+			if (level.getLevelData().isThundering()) {
+				level.setWeatherParameters(0, 0, true, false);
 			}
 			info.cancel();
 		}
